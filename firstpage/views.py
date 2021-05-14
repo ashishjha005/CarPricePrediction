@@ -39,6 +39,6 @@ def predict(request):
         if output<0:
             return render(request,'index.html',{'prediction_texts':"Sorry you cannot sell this car"})
         else:
-            return render(request,'index.html',{'prediction_text':['Your selling price in lakh is', output]})
+            return render(request,'index.html',{'prediction_text':['Your selling price is (in Lakhs)', output]})
     else:
         return render(request,'index.html')
