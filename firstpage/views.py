@@ -5,9 +5,6 @@ import pickle
 import sklearn
 model=pickle.load(open('./models/random_forest_regression_model.pkl','rb'))
 # Create your views here.
-def index(request):
-   context={'a':'hello world'}
-   return render(request,'index.html',context)
 def predict(request):
     Fuel_Type_Diesel=0
     if request.method == 'POST':
